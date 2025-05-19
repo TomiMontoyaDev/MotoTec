@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Cal+Sans&display=swap");
+.App {
+  padding: 2rem;
+  font-family: Cal Sans;
+  text-align: center;
+  color: aliceblue;
+  -webkit-text-stroke: 1px black;
+  height: 100vh;
+  overflow-y: auto;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.ventas {
+  animation: appearfromleft 1s ease-in-out;
+}
+.componentes {
+  animation: appearfromright 1s ease-in-out;
+}
+
+th,
+td {
+  border: 3px solid #ccc;
+  padding: 0.7rem;
+  text-align: center;
+  animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearfromleft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearfromright {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+body {
+  background: linear-gradient(to bottom, black, #8a0000);
+}
+
+.logoproyecciones {
+  width: 300px;
+  height: 300px;
+  margin-bottom: -6rem;
+  margin-top: -3em;
+  animation: movex 3s alternate-reverse infinite;
+}
+
+@keyframes movex {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
