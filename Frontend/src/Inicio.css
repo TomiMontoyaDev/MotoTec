@@ -87,9 +87,3 @@ video {
   cursor: pointer;
   transform: scale(1.1);
 }
-
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}

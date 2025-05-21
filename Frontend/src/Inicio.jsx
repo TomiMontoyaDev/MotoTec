@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Inicio() {
   return (
-    <div>
+    <div className="Appinicio">
       <div className="contenido">
         <div className="inicio">
           <img src="./src/assets/Mototec.png" alt="" className="logo" />
