@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "/Proyecciones.css";
+import "./Proyecciones.css";
 import axios from "axios";
-import "/assets/Mototecwhite.png";
+import "./assets/Mototecwhite.png";
 import { Link } from "react-router-dom";
 
 function Proyeccion() {
@@ -25,7 +25,7 @@ function Proyeccion() {
     //Render del componente
     <div className="App">
       <img
-        src="/src/assets/Mototecwhite.png"
+        src="./src/assets/Mototecwhite.png"
         alt=""
         className="logoproyecciones"
       />
