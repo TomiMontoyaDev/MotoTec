@@ -16,7 +16,7 @@ function Inicio() {
         </div>
       </div>
 
-      <video src="/motosbackground.mp4" autoPlay loop muted></video>
+      <video src="/motosbackground.mp4" playsInline autoPlay loop muted></video>
       <div className="fondo"></div>
     </div>
   );
