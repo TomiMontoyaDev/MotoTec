@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Proyecciones.css";
 import axios from "axios";
-import "./assets/Mototecwhite.png";
+import "/Mototecwhite.png";
 import { Link } from "react-router-dom";
 
 function Proyeccion() {
@@ -12,7 +12,7 @@ function Proyeccion() {
   useEffect(() => {
     //Funcion que se ejecuta al cargar el componente y obtiene los datos guardandolos en las variables con estados
     axios
-      .get("http://127.0.0.1:5000/proyecciones")
+      .get("https://mototec-backend.onrender.com/proyecciones")
       .then((response) => {
         setAños(response.data.años);
         setVentas(response.data.ventas_futuras);
@@ -24,11 +24,7 @@ function Proyeccion() {
   return (
     //Render del componente
     <div className="App">
-      <img
-        src="./src/assets/Mototecwhite.png"
-        alt=""
-        className="logoproyecciones"
-      />
+      <img src="/Mototecwhite.png" alt="" className="logoproyecciones" />
       <h1>📈 Proyección de Ventas MotoTec (2023–2027)</h1>
 
       <h2>Ventas Proyectadas</h2>
