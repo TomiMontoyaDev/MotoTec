@@ -97,7 +97,13 @@ body {
   h1,
   h2 {
     font-size: 1.2rem;
-    padding: 0 1rem;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+    padding: 0%;
+    font-size: 5px;
   }
 
   .logoproyecciones {
@@ -123,7 +129,7 @@ body {
 
   .boton {
     width: 100%;
-    margin: 0.5rem 0;
+    margin-right: 0px;
   }
 
   .App {

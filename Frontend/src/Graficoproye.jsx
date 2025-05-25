@@ -8,6 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { Link } from "react-router-dom";
 
 const GraficoProyecciones = () => {
   const [data, setData] = useState([]);
@@ -32,21 +33,26 @@ const GraficoProyecciones = () => {
   }, []);
 
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <LineChart
-        data={data}
-        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-      >
-        <XAxis dataKey="año" />
-        <YAxis tickFormatter={(value) => Math.round(value)} />
-        <Tooltip formatter={(value) => Math.round(value)} />
-        <Legend />
-        <Line type="monotone" dataKey="Tipo1" stroke="#8884d8" />
-        <Line type="monotone" dataKey="Tipo2" stroke="#82ca9d" />
-        <Line type="monotone" dataKey="Tipo3" stroke="#ffc658" />
-        <Line type="monotone" dataKey="Tipo4" stroke="#ff7300" />
-      </LineChart>
-    </ResponsiveContainer>
+    <>
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart
+          data={data}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        >
+          <XAxis dataKey="año" />
+          <YAxis tickFormatter={(value) => Math.round(value)} />
+          <Tooltip formatter={(value) => Math.round(value)} />
+          <Legend />
+          <Line type="monotone" dataKey="Tipo1" stroke="#8884d8" />
+          <Line type="monotone" dataKey="Tipo2" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="Tipo3" stroke="#ffc658" />
+          <Line type="monotone" dataKey="Tipo4" stroke="#ff7300" />
+        </LineChart>
+      </ResponsiveContainer>
+      <Link to={"/app"}>
+        <button className="boton">Volver</button>
+      </Link>
+    </>
   );
 };
 
