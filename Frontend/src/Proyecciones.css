@@ -22,6 +22,10 @@ h2 {
   color: aliceblue;
 }
 
+h2 {
+  font-size: 25px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -38,7 +42,7 @@ table {
 
 th,
 td {
-  border: 3px solid #ccc;
+  border: 3px solid blue;
   padding: 0.7rem;
   text-align: center;
   animation: appear 1s ease-in-out;
@@ -71,8 +75,22 @@ td {
   }
 }
 
+@keyframes fondoanimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
-  background: linear-gradient(to bottom, black, #8a0000);
+  background: linear-gradient(45deg, black, #8a0000);
+  background-size: 400% 400%;
+  animation: fondoanimado 5s ease infinite;
 }
 
 .logoproyecciones {
@@ -81,7 +99,7 @@ body {
   margin-bottom: -3rem;
   margin-top: -9rem;
   rotate: 3deg;
-  animation: movex 3s alternate-reverse infinite;
+  animation: movex 6s alternate-reverse infinite;
 }
 
 @keyframes movex {
@@ -109,8 +127,17 @@ body {
   .logoproyecciones {
     width: 100%;
     height: auto;
-    animation: none;
+    animation: picar 1s alternate-reverse infinite;
     margin-top: -5rem;
+  }
+
+  @keyframes picar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(20deg);
+    }
   }
 
   table th,
