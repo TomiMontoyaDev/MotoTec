@@ -52,28 +52,30 @@ function Proyeccion() {
       </table>
 
       <h2>Componentes Requeridos</h2>
-      <table className="componentes">
-        <thead>
-          <tr>
-            <th>Año</th>
-            {/* //Ciclo que recorre la matriz de años y los imprime en tablas HTML */}
-            {[...Array(10)].map((_, i) => (
-              <th key={i}>Comp {i + 1}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {/* //Ciclo que recorre la matriz de componentes y las imprime en tablas HTML */}
-          {componentes.map((fila, i) => (
-            <tr key={i}>
-              <td>{años[i]}</td>
-              {fila.map((valor, j) => (
-                <td key={j}>{valor.toFixed(0)}</td>
+      <div className="tabla-scroll">
+        <table className="componentes">
+          <thead>
+            <tr>
+              <th>Año</th>
+              {/* //Ciclo que recorre la matriz de años y los imprime en tablas HTML */}
+              {[...Array(10)].map((_, i) => (
+                <th key={i}>Comp {i + 1}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {/* //Ciclo que recorre la matriz de componentes y las imprime en tablas HTML */}
+            {componentes.map((fila, i) => (
+              <tr key={i}>
+                <td>{años[i]}</td>
+                {fila.map((valor, j) => (
+                  <td key={j}>{valor.toFixed(0)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <Link to={"/"}>
         <button className="boton">Volver a Inicio</button>
       </Link>

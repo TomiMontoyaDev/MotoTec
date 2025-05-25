@@ -123,10 +123,6 @@ body {
     width: 100%;
   }
 
-  .componentes table {
-    width: 50%;
-  }
-
   .boton {
     width: 100%;
     margin-right: 0px;
@@ -139,4 +135,14 @@ body {
     text-align: center;
     height: 100vh;
   }
+
+  .componentes {
+    width: max-content;
+    min-width: 600px;
+  }
+}
+
+.tabla-scroll {
+  overflow-x: auto;
+  width: 100%;
 }
