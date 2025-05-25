@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Cal+Sans&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 .App {
   padding: 2rem;
   font-family: Cal Sans;
@@ -74,18 +78,18 @@ body {
 .logoproyecciones {
   width: 300px;
   height: 300px;
-  margin-bottom: -6rem;
-  margin-top: -3rem;
+  margin-bottom: -3rem;
+  margin-top: -9rem;
   rotate: 3deg;
   animation: movex 3s alternate-reverse infinite;
 }
 
 @keyframes movex {
   from {
-    transform: translateX(-300px);
+    transform: translateX(-80px);
   }
   to {
-    transform: translateX(300px);
+    transform: translateX(800px);
   }
 }
 
@@ -97,15 +101,24 @@ body {
   }
 
   .logoproyecciones {
-    width: 80%;
+    width: 100%;
     height: auto;
-    animation: none; /* Quita animación en móviles */
+    animation: none;
+    margin-top: -5rem;
   }
 
   table th,
   table td {
     font-size: 0.75rem;
     padding: 0.4rem;
+  }
+
+  .ventas table {
+    width: 100%;
+  }
+
+  .componentes table {
+    width: 50%;
   }
 
   .boton {
@@ -115,5 +128,9 @@ body {
 
   .App {
     padding: 0.5rem;
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
   }
 }

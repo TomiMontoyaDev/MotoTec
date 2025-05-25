@@ -77,7 +77,9 @@ function Proyeccion() {
       <Link to={"/"}>
         <button className="boton">Volver a Inicio</button>
       </Link>
-      <button className="boton">Siguiente</button>
+      <Link to={"/graficos"}>
+        <button className="boton">Siguiente</button>
+      </Link>
     </div>
   );
 }
